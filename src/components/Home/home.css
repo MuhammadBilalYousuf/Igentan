@@ -1,0 +1,68 @@
+.home{padding-block-start: 100px;background-image: url(../../assets/hero.png);background-position: center;}.home-container{padding-block-start: 160px;align-content: center;justify-items: center;}.home-subtitle{font-size: var(--h3-fs);font-weight: var(--semi-bold-fw);font-family: var(--grotesk-ff);margin-bottom: 0.25rem;}.home-image-container{text-align: center;margin-bottom: 1rem;}.home-image{position: relative;display: inline-block;vertical-align: middle;}.home-desc{font-weight: var(--bold-fw);font-size: var(--h2-fs);font-family: var(--grotesk-ff);line-height: 1.1;letter-spacing: -0.5px;text-align: center;margin-bottom: 1rem;}.and{font-family: var(--body-font);}.home-span{color: var(--grey-clr);}@media screen and (max-width: 320px){.home-subtitle, .home-desc {font-size: var(--normal-fs);}}@media screen and (min-width: 968px){.home-container{padding-block: 100px;}.home-desc{letter-spacing: -0.6px;margin-bottom: 1rem;}}@media screen and (min-width: 1024px){.home-desc{font-size: var(--h1-fs);margin-bottom: 1rem;}}
+
+.lines {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+  
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: drop 7s 0s infinite;
+            animation: drop 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+  }
+  
+  @-webkit-keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+  
+  @keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
